@@ -14,10 +14,11 @@ access_token = config['twitter']['access_token']
 
 number_of_tweets = click.prompt('How many tweets you want to see in one call?', type=int)
 repeat = click.prompt('After what time should I call API again (in seconds)?', type=int)
+t_end = click.prompt('How long do you want to have script running (in minutes)?', type=int)
 tweeter = click.prompt('What tweet are you looking for?')
 sinceID = click.prompt('From when you want to start searching?',type=int)
 tweeter = '#' + tweeter
-
+t_end = time.time() + 60 * t_end
 config = configparser.ConfigParser()
 config.read('auth.cfg')
 
@@ -68,6 +69,7 @@ for i in range(1):
             time.sleep(repeat)
             return session
 
-while True:
+while time.time() < t_end:
     twitter_session(api_key, api_secret)
+
 
