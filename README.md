@@ -6,4 +6,4 @@ If you want to use it. Create a file secret.ini:
 api_key 
 api_secret 
 access_token
-Key, secret you should recieve in twitte developers page.
+These "secrets" you should find in twitter-developers page.
