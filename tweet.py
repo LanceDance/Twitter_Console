@@ -12,7 +12,7 @@ api_secret = config['twitter']['api_secret']
 access_token = config['twitter']['access_token']
 
 
-number_of_tweets = click.prompt('How many tweets you want to see in one line?', type=int)
+number_of_tweets = click.prompt('How many tweets you want to see in one call?', type=int)
 repeat = click.prompt('After what time should I call API again (in seconds)?', type=int)
 tweeter = click.prompt('What tweet are you looking for?')
 sinceID = click.prompt('From when you want to start searching?',type=int)
