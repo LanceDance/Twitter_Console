@@ -63,12 +63,12 @@ for i in range(1):
         else:
             for tweet in data['statuses']:
                     print(tweet['text'])
-            f = open("outfile_" + str(i) + ".txt", 'w')
+            f = open("outfile" + tweeter + ".csv", 'w')
             json.dump(data["statuses"], f)
             f.close()
-
+            time.sleep(repeat)
             return session
-    time.sleep(repeat)
+
 while True:
     twitter_session(api_key, api_secret)
 
