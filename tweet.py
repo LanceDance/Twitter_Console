@@ -12,10 +12,10 @@ api_secret = config['twitter']['api_secret']
 access_token = config['twitter']['access_token']
 
 
-number_of_tweets = click.prompt('Please enter a valid integer', type=int)
-repeat = click.prompt('Restart?', type=int)
+number_of_tweets = click.prompt('How many tweets you want to see in one line?', type=int)
+repeat = click.prompt('After what time should I call API again (in seconds)?', type=int)
 tweeter = click.prompt('What tweet are you looking for?')
-sinceID = click.prompt('Please enter a valid integer',type=int)
+sinceID = click.prompt('From when you want to start searching?',type=int)
 tweeter = '#' + tweeter
 
 config = configparser.ConfigParser()
@@ -55,8 +55,7 @@ for i in range(1):
                 params={'q': tweeter,
                         'count': number_of_tweets,
                         'since_id':sinceID}, )
-                #for tweet in r.json()['statuses']:
-                 #   print(tweet['text'])
+
         data = r.json()
         if data['statuses'] == []:
             print("no tweet has been found :(")
