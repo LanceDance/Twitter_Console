@@ -63,7 +63,7 @@ for i in range(1):
         else:
             for tweet in data['statuses']:
                     print(tweet['text'])
-            f = open("outfile" + tweeter + ".csv", 'w')
+            f = open("outputs/outfile" + tweeter + ".csv", 'w')
             json.dump(data["statuses"], f)
             f.close()
             time.sleep(repeat)
