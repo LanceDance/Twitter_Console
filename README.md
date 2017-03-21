@@ -6,4 +6,4 @@ If you want to use it. Create a file secret.ini:
 api_key 
 api_secret 
 access_token
-These "secrets" you should find in twitter-developers page.
+These "secrets" you should find in twitter-developers page."# Flask" 
